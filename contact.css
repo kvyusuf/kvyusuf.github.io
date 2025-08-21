@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #612c5e;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .headline {
+    color: #fcb900;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contact-form button {
+    padding: 12px;
+    background-color: #fcb900;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #2563eb;
+    color: #fff;
+  }
+  
+  .kontak-lain h2 {
+    color: #fcb900;
+    margin-bottom: 15px;
+  }
+  
+  .kontak-lain p {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  /* Animasi fade-in saat load halaman */
+.container {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+  
+  /* Media Query buat layar kecil (HP) */
+@media (max-width: 480px) {
+    .container {
+      padding: 20px 10px;
+    }
+  
+    .headline {
+      font-size: 2rem;   /* Kecil sedikit biar muat */
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;  /* Text agak kecil */
+      padding: 8px 12px;  /* Kotak lebih rapat */
+    }
+  
+    .contact-form button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  

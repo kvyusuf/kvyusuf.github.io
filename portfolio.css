@@ -1,0 +1,74 @@
+/* Background ungu tua */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #612c5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Container slider */
+  .container {
+    width: 60%;
+    max-width: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    opacity: 0; /* buat animasi fade-in */
+  }
+  
+  /* Animasi fade-in */
+  .fade-in {
+    animation: fadeInContent 1.2s ease-in forwards;
+  }
+  @keyframes fadeInContent {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slides */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slides img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Tombol prev/next */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(37, 97, 228, 0.5);
+    border: none;
+    padding: 13px;
+    cursor: pointer;
+    border-radius: 15%;
+    color: white;
+    font-size: 22px;
+    transition: background 0.3s;
+  }
+  .prev:hover, .next:hover {
+    background: rgba(252, 185, 0, 0.9);
+  }
+  .prev { left: 5px; }
+  .next { right: 5px; }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      width: 95%;
+    }
+    .prev, .next {
+      padding: 12px;
+      font-size: 20px;
+    }
+  }
+  
